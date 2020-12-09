@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.List;
 
-public class Listt {
+public class Listt implements Serializable {
 
 
     public List<User> list;

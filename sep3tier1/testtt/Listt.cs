@@ -5,7 +5,7 @@ namespace testtt
     public class Listt
     {
 
-        public List<User> list;
+        public List<User> list { set; get; }
 
         public List<User> getlist()
         {

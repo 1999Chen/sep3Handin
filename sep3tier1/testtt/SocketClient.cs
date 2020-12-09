@@ -49,26 +49,30 @@ namespace testtt
 
             User user=new User("asd",8);
             User user1=new User("sss",12);
-            // string a = JsonSerializer.Serialize(user);
+            string a = JsonSerializer.Serialize(user);
             // Console.WriteLine(a);
-            // byte[] bytesa = Encoding.UTF8.GetBytes(a);
+            byte[] bytesa = Encoding.UTF8.GetBytes(a);
             // socket.Send(bytesa);
-            // Console.WriteLine(bytesa);
+            
             // Console.WriteLine(a);
             //
             var arraylist=new List<User>();
             arraylist.Add(user);
             arraylist.Add(user1);
+            Console.WriteLine(arraylist[0].name);
             var list=new Listt();
+       
             list.setlist(arraylist);
       
-            Console.WriteLine(list.);
+            Console.WriteLine(list.getlist()[0].name);
 
             string lis = JsonSerializer.Serialize(list);
-            byte[] listbyte=new byte[1024];
+            byte[] listbyte = Encoding.UTF8.GetBytes(lis);
 
             socket.Send(listbyte);
             
+            Console.WriteLine(a);
+            Console.WriteLine(bytesa);
             Console.WriteLine(lis);
             Console.WriteLine(listbyte);
             

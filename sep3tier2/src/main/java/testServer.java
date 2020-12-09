@@ -35,7 +35,7 @@ public class testServer {
             Gson gson = new Gson();
             Listt list=gson.fromJson(a,Listt.class);
 
-            System.out.println(list.getList().toString());
+            System.out.println(list.getList().get(0).getName());
 
 
 //            User user=gson.fromJson(a,User.class);
