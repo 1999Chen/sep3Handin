@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\c#\\sep3tier3\\sep3tier3\\sep3tier3.csproj": {}
+    "D:\\github\\sep3POC\\sep3tier3\\sep3tier3\\sep3tier3.csproj": {}
   },
   "projects": {
-    "D:\\c#\\sep3tier3\\sep3tier3\\sep3tier3.csproj": {
+    "D:\\github\\sep3POC\\sep3tier3\\sep3tier3\\sep3tier3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\c#\\sep3tier3\\sep3tier3\\sep3tier3.csproj",
+        "projectUniqueName": "D:\\github\\sep3POC\\sep3tier3\\sep3tier3\\sep3tier3.csproj",
         "projectName": "sep3tier3",
-        "projectPath": "D:\\c#\\sep3tier3\\sep3tier3\\sep3tier3.csproj",
+        "projectPath": "D:\\github\\sep3POC\\sep3tier3\\sep3tier3\\sep3tier3.csproj",
         "packagesPath": "C:\\Users\\yu\\.nuget\\packages\\",
-        "outputPath": "D:\\c#\\sep3tier3\\sep3tier3\\obj\\",
+        "outputPath": "D:\\github\\sep3POC\\sep3tier3\\sep3tier3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yu\\AppData\\Roaming\\NuGet\\NuGet.Config",

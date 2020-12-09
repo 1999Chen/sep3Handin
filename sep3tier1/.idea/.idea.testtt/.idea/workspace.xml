@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ee6439d6-1f91-488c-86b8-e66ff0cdc8fd" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -7,15 +25,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/testtt/Program.cs" />
+        <option value="$PROJECT_DIR$/testtt/User.cs" />
+        <option value="$PROJECT_DIR$/testtt/List.cs" />
         <option value="$PROJECT_DIR$/testtt/SocketClient.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1k6sp6aPfgmrgMS5Ds8ZKv6rh6v" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -65,6 +89,9 @@
       <workItem from="1605067672725" duration="1673000" />
       <workItem from="1605115733725" duration="10000" />
       <workItem from="1605521795167" duration="4000" />
+      <workItem from="1607360396801" duration="11478000" />
+      <workItem from="1607428672339" duration="7170000" />
+      <workItem from="1607518805873" duration="1056000" />
     </task>
     <servers />
   </component>
@@ -73,29 +100,64 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="940" height="265" key="GridCell.Tab.0.bottom" timestamp="1605084219907">
+    <state width="955" height="283" key="GridCell.Tab.0.bottom" timestamp="1607519532935">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="940" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605084219907" />
-    <state width="940" height="265" key="GridCell.Tab.0.center" timestamp="1605084219907">
+    <state width="955" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607519532935" />
+    <state width="955" height="283" key="GridCell.Tab.0.center" timestamp="1607519532935">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="940" height="265" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605084219907" />
-    <state width="940" height="265" key="GridCell.Tab.0.left" timestamp="1605084219907">
+    <state width="955" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607519532935" />
+    <state width="955" height="283" key="GridCell.Tab.0.left" timestamp="1607519532935">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="940" height="265" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605084219907" />
-    <state width="940" height="265" key="GridCell.Tab.0.right" timestamp="1605084219907">
+    <state width="955" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607519532935" />
+    <state width="955" height="283" key="GridCell.Tab.0.right" timestamp="1607519532935">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="940" height="265" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605084219907" />
+    <state width="955" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607519532935" />
     <state x="1009" y="169" key="Rider.ProjectTemplateDialog.Size" timestamp="1605064814148">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1009" y="169" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040@0.0.1920.1040" timestamp="1605064814148" />
+    <state x="1106" y="199" key="RiderGenerateDialog" timestamp="1607364056919">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1106" y="199" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607364056919" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/testtt/Program.cs</url>
+          <line>8</line>
+          <properties documentPath="D:\github\sep3POC\sep3tier1\testtt\Program.cs" initialLine="8">
+            <startOffsets>
+              <option value="120" />
+            </startOffsets>
+            <endOffsets>
+              <option value="154" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

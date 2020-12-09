@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "sgjeuApK7KP2jSytSzIUrN7RSOEgOf0oRRxEC+y1Q2P/EtPG8oJdI8Epf9qCG2DNw5Zjlw3s5x8rDNxgYzgUZA==",
+  "dgSpecHash": "Wfye+1aHiw5V49DIN2YY2BfbCVM6RSvZi8wkRYAGoxBiw3ESByVXM/kiWz37E6/oU16MKL4n19SShD4yoAxuaQ==",
   "success": true,
-  "projectFilePath": "D:\\c#\\testtt\\testtt\\testtt.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\github\\sep3POC\\sep3tier1\\testtt\\testtt.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yu\\.nuget\\packages\\json.net\\1.0.23\\json.net.1.0.23.nupkg.sha512"
+  ],
   "logs": []
 }

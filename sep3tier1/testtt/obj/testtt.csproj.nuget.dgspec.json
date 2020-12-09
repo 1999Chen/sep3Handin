@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\c#\\testtt\\testtt\\testtt.csproj": {}
+    "D:\\github\\sep3POC\\sep3tier1\\testtt\\testtt.csproj": {}
   },
   "projects": {
-    "D:\\c#\\testtt\\testtt\\testtt.csproj": {
+    "D:\\github\\sep3POC\\sep3tier1\\testtt\\testtt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\c#\\testtt\\testtt\\testtt.csproj",
+        "projectUniqueName": "D:\\github\\sep3POC\\sep3tier1\\testtt\\testtt.csproj",
         "projectName": "testtt",
-        "projectPath": "D:\\c#\\testtt\\testtt\\testtt.csproj",
+        "projectPath": "D:\\github\\sep3POC\\sep3tier1\\testtt\\testtt.csproj",
         "packagesPath": "C:\\Users\\yu\\.nuget\\packages\\",
-        "outputPath": "D:\\c#\\testtt\\testtt\\obj\\",
+        "outputPath": "D:\\github\\sep3POC\\sep3tier1\\testtt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Json.Net": {
+              "target": "Package",
+              "version": "[1.0.23, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
