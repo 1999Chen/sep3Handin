@@ -3,16 +3,17 @@ using sep3tier3.Models;
 
 namespace sep3tier3.DataAccess
 {
-    public class sepDBContext:DbContext
+    public class sepDBContext : DbContext
     {
-        public DbSet<Friend> Friends { get; set; }
-        public DbSet<User>Users { get; set; }
-        public DbSet<SocialLine> SocialLines { get; set; }
-        public DbSet<ChatMessage>ChatMessages { get; set; }
+        public DbSet<User>Users { set; get; }
+        public DbSet<ChatMessage>ChatMessages { set; get; }
+        public DbSet<Friend>Friends { set; get; }
+        public DbSet<SocialLine>SocialLines { set; get; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=C:/Users/yu/Desktop/sep.db");
+            optionsBuilder.UseSqlite("Data Source = C:/Users/yu/Desktop/sep.db");
+
         }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -20,10 +21,6 @@ namespace sep3tier3.DataAccess
             modelBuilder.Entity<Friend>()
                 .HasKey(c => new { c.username1, c.username2 });
         }
-        
-        
-        
-        
         
         
     }

@@ -9,7 +9,7 @@ using sep3tier3.DataAccess;
 namespace sep3tier3.Migrations
 {
     [DbContext(typeof(sepDBContext))]
-    [Migration("20201211132103_InitialCreate")]
+    [Migration("20201213183146_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

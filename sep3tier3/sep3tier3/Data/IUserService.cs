@@ -10,6 +10,13 @@ namespace sep3tier3.Data
         User LoginUser(User user);
 
         User RegisterUser(User user);
+
+        List<User> getUsersByInfo(string firstname, string lastname, string sex,
+            string major, string hometown, int maxage, int minage, string hobbies);
+
+        IEnumerable<User> getAllUsers();
+
+        void editInfo(User user);
         
         
 

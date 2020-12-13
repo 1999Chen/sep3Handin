@@ -12,6 +12,7 @@ using sep3tier3.DataAccess;
 using sep3tier3.Models;
 
 
+
 namespace sep3tier3.Data
 {
     public class userService : IUserService
@@ -39,7 +40,7 @@ namespace sep3tier3.Data
             {
                 return null;
             }
-
+            
             dbcontext.Users.Add(user);
             users.Add(user);
             dbcontext.SaveChanges();
@@ -64,19 +65,18 @@ namespace sep3tier3.Data
             return null;
         }
 
-        public void editInfo(User user, string firstname, string lastname, string sex, string description, string major,
-            string hometown, byte[] profilePicture, int age, string hobbies)
+        public void editInfo(User user)
         {
             var loginUser = dbcontext.Users.Find(user.username);
-            loginUser.firstname = firstname;
-            loginUser.lastname = lastname;
-            loginUser.sex = sex;
-            loginUser.age = age;
-            loginUser.major = major;
-            loginUser.description = description;
-            loginUser.hobbies = hobbies;
-            loginUser.hometown = hometown;
-            loginUser.profilePicture = profilePicture;
+            loginUser.firstname = user.firstname;
+            loginUser.lastname = user.lastname;
+            loginUser.sex = user.sex;
+            loginUser.age = user.age;
+            loginUser.major = user.major;
+            loginUser.description = user.description;
+            loginUser.hobbies = user.hobbies;
+            loginUser.hometown = user.hometown;
+            loginUser.profilePicture = user.profilePicture;
             dbcontext.SaveChanges();
         }
 
@@ -85,7 +85,7 @@ namespace sep3tier3.Data
             return dbcontext.Users;
         }
 
-        public List<User> getUsersByInfo(string firstname, string lastname, string sex, string description,
+        public List<User> getUsersByInfo(string firstname, string lastname, string sex, 
             string major, string hometown, int maxage, int minage, string hobbies)
         {
             var users = getAllUsers();
@@ -95,7 +95,7 @@ namespace sep3tier3.Data
             foreach (User user in users)
             {
                 if (user.firstname.Contains(firstname) && user.lastname.Contains(lastname) && user.sex.Contains(sex) &&
-                    user.description.Contains(description) && user.age >= minage && user.age <= maxage &&
+                    user.age >= minage && user.age <= maxage &&
                     user.hobbies.Contains(hobbies) && user.major.Contains(major) && user.hometown.Contains(hometown))
                 {
                     list.Add(user);
@@ -104,15 +104,7 @@ namespace sep3tier3.Data
 
             return list;
         }
-
-        // public string addFriendRequest()
-        // {
-        //     
-        //     
-        //     
-        // }
-        //
-
+        
 
         public void addFriend(User user1, User user2)
         {

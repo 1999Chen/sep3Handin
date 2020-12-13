@@ -39,6 +39,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A646A1B6-9A6B-4695-9F2B-93D08BF1D8F7/C/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/697264F7-DE55-43E2-A20B-15912EC0ACA0/1/GenericHostBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -64,10 +65,10 @@
         <option value="$PROJECT_DIR$/sep3tier3/Data/IFriendService.cs" />
         <option value="$PROJECT_DIR$/sep3tier3/Data/friendService.cs" />
         <option value="$PROJECT_DIR$/sep3tier3/Models/Friend.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/DataAccess/sepDBContext.cs" />
         <option value="$PROJECT_DIR$/sep3tier3/Data/chatMessageService.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Data/userService.cs" />
         <option value="$PROJECT_DIR$/sep3tier3/Data/socialLineService.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/DataAccess/sepDBContext.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Data/userService.cs" />
         <option value="$PROJECT_DIR$/sep3tier3/Data/IUserService.cs" />
         <option value="$PROJECT_DIR$/sep3tier3/Controllers/usersController.cs" />
       </list>
@@ -80,6 +81,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -139,6 +141,9 @@
       <workItem from="1605121424075" duration="3434000" />
       <workItem from="1607359344403" duration="1221000" />
       <workItem from="1607529057844" duration="34686000" />
+      <workItem from="1607879063672" duration="1280000" />
+      <workItem from="1607881071248" duration="689000" />
+      <workItem from="1607881817784" duration="5977000" />
     </task>
     <servers />
   </component>
@@ -163,10 +168,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="999" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607531426131">
+    <state x="999" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607884252041">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="999" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607531426131" />
+    <state x="999" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607884252041" />
     <state width="1151" height="278" key="GridCell.Tab.0.bottom" timestamp="1605124886796">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -191,6 +196,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1145" y="199" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607638657306" />
+    <state x="790" y="280" width="336" height="269" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1607884278241">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="790" y="280" width="336" height="269" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1607884278241" />
     <state x="803" y="290" width="671" height="459" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1607691171629">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

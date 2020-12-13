@@ -85,6 +85,7 @@ namespace testtt
             byte[] rcvBytes = new byte[rcvLen];
             socket.Receive(rcvBytes);
             String rcv = System.Text.Encoding.ASCII.GetString(rcvBytes);
+            
 
             Console.WriteLine("Client received: " + rcv);
           

@@ -38,6 +38,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "GoogleGson": {
+              "target": "Package",
+              "version": "[2.6.1, )"
+            },
             "Json.Net": {
               "target": "Package",
               "version": "[1.0.23, )"
