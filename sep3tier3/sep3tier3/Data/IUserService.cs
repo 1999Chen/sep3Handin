@@ -4,12 +4,14 @@ using sep3tier3.Models;
 
 namespace sep3tier3.Data
 {
-    public interface ImsgService
+    public interface IUserService
     {
 
-        Task<msg> AddMsgAsync(msg msg);
-        Task<string> GetAllMsgAsync();
+        User LoginUser(User user);
 
+        User RegisterUser(User user);
+        
+        
 
 
 

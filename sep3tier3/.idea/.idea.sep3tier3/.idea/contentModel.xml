@@ -12,14 +12,35 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="chatMessagesController.cs" t="Include" />
+          <e p="friendsController.cs" t="Include" />
           <e p="msgController.cs" t="Include" />
+          <e p="socialLinesController.cs" t="Include" />
+          <e p="usersController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
-          <e p="ImsgService.cs" t="Include" />
-          <e p="msgService.cs" t="Include" />
+          <e p="chatMessageService.cs" t="Include" />
+          <e p="friendService.cs" t="Include" />
+          <e p="IChatMessageService.cs" t="Include" />
+          <e p="IFriendService.cs" t="Include" />
+          <e p="ISocialLineService.cs" t="Include" />
+          <e p="IUserService.cs" t="Include" />
+          <e p="socialLineService.cs" t="Include" />
+          <e p="userService.cs" t="Include" />
+        </e>
+        <e p="DataAccess" t="Include">
+          <e p="sepDBContext.cs" t="Include" />
+        </e>
+        <e p="Migrations" t="Include">
+          <e p="20201211132103_InitialCreate.cs" t="Include" />
+          <e p="20201211132103_InitialCreate.Designer.cs" t="Include" />
+          <e p="sepDBContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
-          <e p="msg.cs" t="Include" />
+          <e p="ChatMessage.cs" t="Include" />
+          <e p="Friend.cs" t="Include" />
+          <e p="SocialLine.cs" t="Include" />
+          <e p="User.cs" t="Include" />
         </e>
         <e p="msgs.json" t="Include" />
         <e p="obj" t="ExcludeRecursive">

@@ -28,7 +28,7 @@ namespace sep3tier3
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<ImsgService,msgService>();
+            services.AddScoped<IUserService,userService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

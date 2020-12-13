@@ -45,13 +45,31 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/sep3tier3/Models/msg.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Startup.cs" />
         <option value="$PROJECT_DIR$/sep3tier3/Data/msgService.cs" />
         <option value="$PROJECT_DIR$/sep3tier3/Data/ImsgService.cs" />
         <option value="$PROJECT_DIR$/sep3tier3/Controllers/WeatherForecastController.cs" />
         <option value="$PROJECT_DIR$/sep3tier3/msgs.json" />
         <option value="$PROJECT_DIR$/sep3tier3/Properties/launchSettings.json" />
+        <option value="$PROJECT_DIR$/sep3tier3/Startup.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Models/ChatMessage.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Models/SocialLine.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Models/User.cs" />
         <option value="$PROJECT_DIR$/sep3tier3/Controllers/msgController.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Controllers/userController.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Controllers/socialLineController.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Controllers/friendController.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Controllers/chatMessageController.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Data/IChatMessageService.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Data/ISocialLineService.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Data/IFriendService.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Data/friendService.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Models/Friend.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/DataAccess/sepDBContext.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Data/chatMessageService.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Data/userService.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Data/socialLineService.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Data/IUserService.cs" />
+        <option value="$PROJECT_DIR$/sep3tier3/Controllers/usersController.cs" />
       </list>
     </option>
   </component>
@@ -70,6 +88,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.sep3tier3">
     <configuration name="sep3tier3" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -119,6 +138,7 @@
       <workItem from="1605115782147" duration="3254000" />
       <workItem from="1605121424075" duration="3434000" />
       <workItem from="1607359344403" duration="1221000" />
+      <workItem from="1607529057844" duration="34686000" />
     </task>
     <servers />
   </component>
@@ -137,15 +157,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="999" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605068608325">
+    <state x="999" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607531426131">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="999" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605068608325" />
+    <state x="999" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607531426131" />
     <state width="1151" height="278" key="GridCell.Tab.0.bottom" timestamp="1605124886796">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -162,10 +183,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1151" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605124886796" />
-    <state x="1145" y="199" key="RiderGenerateDialog" timestamp="1605055081952">
+    <state x="943" y="255" key="Rider.ProjectTemplateDialog.Size" timestamp="1607629840541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1145" y="199" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605055081952" />
+    <state x="943" y="255" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040@0.0.1920.1040" timestamp="1607629840541" />
+    <state x="1145" y="199" key="RiderGenerateDialog" timestamp="1607638657306">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1145" y="199" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607638657306" />
+    <state x="803" y="290" width="671" height="459" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1607691171629">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="803" y="290" width="671" height="459" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607691171629" />
     <state x="971" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1605059941413">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

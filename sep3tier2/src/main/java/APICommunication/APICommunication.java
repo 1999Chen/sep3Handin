@@ -1,11 +1,10 @@
 package APICommunication;
 
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
+import Model.ChatMessage;
+import org.apache.http.client.methods.*;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.*;
@@ -18,12 +17,54 @@ public final class APICommunication
 {
     private static CloseableHttpClient client = HttpClients.createDefault();
     private static HttpPost httpPost;
+    private static HttpGet httpGet;
+    private static HttpPut httpPut;
+    private static HttpDelete httpDelete;
 
-    public static synchronized JSONObject createAccount(JSONObject usr)
+
+    public static synchronized JSONObject Login(String username, String password)
+    {
+        String responseBody = null;
+        httpPost = new HttpPost("https://localhost:44380/users/Login");
+        String json = "{\"Username\": \"" + username + "\",\"Password\": \"" + password + "\"}";
+        StringEntity entity = null;
+        try
+        {
+            entity = new StringEntity(json);
+
+        } catch (UnsupportedEncodingException e)
+        {
+            e.printStackTrace();
+        }
+        httpPost.setEntity(entity);
+        httpPost.setHeader("Accept", "application/json");
+        httpPost.setHeader("Content-type", "application/json");
+        CloseableHttpResponse response = null;
+        try
+        {
+            response = client.execute(httpPost);
+            responseBody = new String(response.getEntity().getContent().readAllBytes());
+        } catch (IOException e)
+        {
+            e.getMessage();
+        }
+        if (responseBody == null)
+        {
+            return new JSONObject("{\"ResponseCode\": \"connect to T3 failed\"}");
+        } else
+        {
+            return new JSONObject(responseBody);
+        }
+    }
+
+
+
+
+    public static synchronized JSONObject Register(JSONObject user)
     {
 
         httpPost = new HttpPost("https://localhost:44380/users/register");
-        String json = usr.toString();
+        String json = user.toString();
         StringEntity entity = null;
         try
         {
@@ -50,7 +91,7 @@ public final class APICommunication
     }
 
 
-    public static synchronized JSONObject getFisher(int id, String token)
+    public static synchronized JSONObject getUser(int id, String token)
     {
         StringBuilder result = new StringBuilder();
         URL url = null;
@@ -105,12 +146,11 @@ public final class APICommunication
         return null;
     }
 
-
-    public static synchronized JSONObject login(String username, String password)
+    public static synchronized JSONObject sendMessage(ChatMessage message)
     {
-        String responseBody = null;
-        httpPost = new HttpPost("https://localhost:44380/users/Authenticate");
-        String json = "{\"Username\": \"" + username + "\",\"Password\": \"" + password + "\"}";
+
+        httpPost = new HttpPost("https://localhost:44380/users/register");
+        String json = message.toString();
         StringEntity entity = null;
         try
         {
@@ -127,26 +167,37 @@ public final class APICommunication
         try
         {
             response = client.execute(httpPost);
-            responseBody = new String(response.getEntity().getContent().readAllBytes());
         } catch (IOException e)
         {
-            e.getMessage();
+            e.printStackTrace();
         }
-        if (responseBody == null)
-        {
-            return new JSONObject("{\"ResponseCode\": \"Can't connect to T3 \"}");
-        } else
-        {
-            return new JSONObject(responseBody);
-        }
+        int responseCodeInt = response.getStatusLine().getStatusCode();
+        JSONObject responseCode = new JSONObject("{\"ResponseCode\": \"" + responseCodeInt + "\"}");
+        return responseCode;
+
+
+
+
     }
 
-    public static synchronized JSONObject editFisher(int id, JSONObject data, String token) //pass,sexpref,picref,discription
+    public static synchronized JSONObject sendFriendRequest(){
+
+
+
+
+
+    }
+
+
+
+
+
+    public static synchronized JSONObject editUser(String username, JSONObject data) //pass,sexpref,picref,discription
     {
         URL url = null;
         try
         {
-            url = new URL("https://localhost:44380/users/" + id);
+            url = new URL("https://localhost:44380/users/" + username);
         } catch (MalformedURLException e)
         {
             e.printStackTrace();
@@ -162,7 +213,7 @@ public final class APICommunication
         httpCon.setDoOutput(true);
         try
         {
-            httpCon.setRequestProperty("Authorization", "Bearer " + token);
+            httpCon.setRequestProperty("Authorization", "Bearer ");
             httpCon.setRequestProperty("Content-Type", "application/json");
             httpCon.setRequestMethod("PUT");
         } catch (ProtocolException e)
@@ -201,66 +252,66 @@ public final class APICommunication
     }
 
 
-    public static synchronized JSONArray getAllFishersAccordingToTheirPref(int yourid, String token)
-    {
-        /**GETTING DATA ABOUT THE USER BY ID*/
-        JSONObject dataAboutUser = getFisher(yourid, token);
-        int sexPref = dataAboutUser.getInt("PersonSexualityId");
-        String gender = dataAboutUser.getString("Gender");
-        /***/
-        StringBuilder result = new StringBuilder();
-        URL url = null;
-        try
-        {
-            url = new URL("https://localhost:44380/users/GetFishersPref/" + gender + ";" + sexPref);
-        } catch (MalformedURLException e)
-        {
-            e.printStackTrace();
-        }
-        HttpURLConnection conn = null;
-        try
-        {
-            conn = (HttpURLConnection) url.openConnection();
-            try
-            {
-                conn.setRequestProperty("Authorization", "Bearer " + token);
-                conn.setRequestProperty("Content-Type", "application/json");
-                conn.setRequestMethod("GET");
-            } catch (ProtocolException e)
-            {
-                e.printStackTrace();
-            }
-            BufferedReader rd;
-            rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-            String line;
-            while ((line = rd.readLine()) != null)
-            {
-                result.append(line);
-            }
-            rd.close();
-        } catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-        try
-        {
-            if (conn.getResponseCode() != 200)
-            {
-                JSONArray JSONResult = new JSONArray("[{\"ResponseCode\": \"" + conn.getResponseCode() + "\"}]");
-                return JSONResult;
-            } else
-            {
-                JSONArray JSONResult = new JSONArray(result.toString());
-                return JSONResult;
-            }
-        } catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-
-        return null;
-
-    }
+//    public static synchronized JSONArray getAllUsersByInfo(String sex,String major,String hometown)
+//    {
+//        /**GETTING DATA ABOUT THE USER BY ID*/
+//        JSONObject dataAboutUser = getUser(yourid, token);
+//        int sexPref = dataAboutUser.getInt("PersonSexualityId");
+//        String gender = dataAboutUser.getString("Gender");
+//        /***/
+//        StringBuilder result = new StringBuilder();
+//        URL url = null;
+//        try
+//        {
+//            url = new URL("https://localhost:44380/users/GetFishersPref/" + gender + ";" + sexPref);
+//        } catch (MalformedURLException e)
+//        {
+//            e.printStackTrace();
+//        }
+//        HttpURLConnection conn = null;
+//        try
+//        {
+//            conn = (HttpURLConnection) url.openConnection();
+//            try
+//            {
+//                conn.setRequestProperty("Authorization", "Bearer " + token);
+//                conn.setRequestProperty("Content-Type", "application/json");
+//                conn.setRequestMethod("GET");
+//            } catch (ProtocolException e)
+//            {
+//                e.printStackTrace();
+//            }
+//            BufferedReader rd;
+//            rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+//            String line;
+//            while ((line = rd.readLine()) != null)
+//            {
+//                result.append(line);
+//            }
+//            rd.close();
+//        } catch (IOException e)
+//        {
+//            e.printStackTrace();
+//        }
+//        try
+//        {
+//            if (conn.getResponseCode() != 200)
+//            {
+//                JSONArray JSONResult = new JSONArray("[{\"ResponseCode\": \"" + conn.getResponseCode() + "\"}]");
+//                return JSONResult;
+//            } else
+//            {
+//                JSONArray JSONResult = new JSONArray(result.toString());
+//                return JSONResult;
+//            }
+//        } catch (IOException e)
+//        {
+//            e.printStackTrace();
+//        }
+//
+//        return null;
+//
+//    }
 
     public static synchronized JSONObject like(int Fisher2Id, String token)
     {
@@ -313,55 +364,55 @@ public final class APICommunication
     }
 
 
-    public static synchronized JSONObject reject(int Fisher2Id, String token)
-    {
-        URL url = null;
-        try
-        {
-            url = new URL("https://localhost:44380/users/Reject");
-        } catch (MalformedURLException e)
-        {
-            e.printStackTrace();
-        }
-        HttpURLConnection httpCon = null;
-        try
-        {
-            httpCon = (HttpURLConnection) url.openConnection();
-        } catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-        httpCon.setDoOutput(true);
-        try
-        {
-            httpCon.setRequestProperty("Authorization", "Bearer " + token);
-            httpCon.setRequestProperty("Content-Type", "application/json");
-            httpCon.setRequestMethod("POST");
-        } catch (ProtocolException e)
-        {
-            e.printStackTrace();
-        }
-        try
-        {
-            OutputStreamWriter out = new OutputStreamWriter(httpCon.getOutputStream());
-            String Jsondata = "{\"Fisher2Id\": " + Fisher2Id + "}";
-            out.write(Jsondata);
-            out.close();
-            httpCon.getInputStream();
-        } catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-        JSONObject JSONResult = null;
-        try
-        {
-            JSONResult = new JSONObject("{\"ResponseCode\": \"" + httpCon.getResponseCode() + "\"}");
-        } catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-        return JSONResult;
-    }
+//    public static synchronized JSONObject reject(int Fisher2Id, String token)
+//    {
+//        URL url = null;
+//        try
+//        {
+//            url = new URL("https://localhost:44380/users/Reject");
+//        } catch (MalformedURLException e)
+//        {
+//            e.printStackTrace();
+//        }
+//        HttpURLConnection httpCon = null;
+//        try
+//        {
+//            httpCon = (HttpURLConnection) url.openConnection();
+//        } catch (IOException e)
+//        {
+//            e.printStackTrace();
+//        }
+//        httpCon.setDoOutput(true);
+//        try
+//        {
+//            httpCon.setRequestProperty("Authorization", "Bearer " + token);
+//            httpCon.setRequestProperty("Content-Type", "application/json");
+//            httpCon.setRequestMethod("POST");
+//        } catch (ProtocolException e)
+//        {
+//            e.printStackTrace();
+//        }
+//        try
+//        {
+//            OutputStreamWriter out = new OutputStreamWriter(httpCon.getOutputStream());
+//            String Jsondata = "{\"Fisher2Id\": " + Fisher2Id + "}";
+//            out.write(Jsondata);
+//            out.close();
+//            httpCon.getInputStream();
+//        } catch (IOException e)
+//        {
+//            e.printStackTrace();
+//        }
+//        JSONObject JSONResult = null;
+//        try
+//        {
+//            JSONResult = new JSONObject("{\"ResponseCode\": \"" + httpCon.getResponseCode() + "\"}");
+//        } catch (IOException e)
+//        {
+//            e.printStackTrace();
+//        }
+//        return JSONResult;
+//    }
 
 }
 
