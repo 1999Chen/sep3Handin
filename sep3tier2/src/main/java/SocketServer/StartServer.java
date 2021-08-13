@@ -6,32 +6,33 @@ import java.net.Socket;
 
 public class StartServer {
 
-    private ServerSocket serverSocket;
-    private Socket clientSocket;
+    public static ServerSocket serverSocket = null;
 
-    public void start(int port)
+    static
     {
-        try
-        {
-            serverSocket = new ServerSocket(port);
-            System.out.println("Server started");
-            int client = 0;
-            while (true)
-            {
-                clientSocket = serverSocket.accept();
-                System.out.println("Connected!");
-                Thread th = new Thread( new SocketServer());
-                client++;
-                System.out.println("client number" + client);
-                th.start();
-            }
-        } catch (IOException e)
-        {
+        try {
+            serverSocket = new ServerSocket(8500);
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    public static void main(String[] args)
+    {
+        Socket socket = new Socket();
+        try
+        {
+            while (true)
+            {
+                socket = serverSocket.accept();
+                new ServerThread(socket).start();
 
-
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
 
 }

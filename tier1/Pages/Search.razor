@@ -1,0 +1,176 @@
+@page "/Search"
+@using tier1.Models
+@using tier1.Data
+@using tier1.Services
+@inject IUserService userService
+
+<div class="same">
+    <div id="menu">
+        <h3 id="h3prof">BuddieFinder</h3>
+                        
+        <NavLink href="friendslist" class="up"> Friends list</NavLink>
+        <NavLink href="chat" class="up">Chat</NavLink>
+        <NavLink href="profileview" class="up">Profile</NavLink>
+        <NavLink href="search" class="up">Search</NavLink>
+        <NavLink href="FriendRequest" class="up">FriendRequest</NavLink>
+     
+        <div id="searchbox">
+            <div> Username </div> <input type="text" @bind-value="username">
+            <div> Firstname </div> <input type="text" @bind-value="firstname"/>
+            <div> LastName </div> <input type="text" @bind-value="lastname">
+            <div>
+                <label>Sex: </label></div>
+               <div> <select @onchange="@setSex">
+                    <option ></option>
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+            <div>
+                <label>Major: </label></div>
+            <div>
+                <select @onchange="@setMajor">
+                    <option></option>
+                    <option value="Architectural Technology and Construction Management">Architectural Technology and Construction Management</option>
+                    <option value="Character Animation">Character Animation</option>
+                    <option value="Civil Engineering ">Civil Engineering </option>
+                    <option value="Climate and Supply Engineering ">Climate and Supply Engineering </option>
+                    <option value="Computer Graphic Arts">Computer Graphic Arts</option>
+                    <option value="Construction Technology">Construction Technology</option>
+                    <option value="Design and Business">Design and Business</option>
+                    <option value="Design, Technology and Business">Design, Technology and Business</option>
+                    <option value="Global Business Engineering">Global Business Engineering</option>
+                    <option value="Global Nutrition and Health ">Global Nutrition and Health </option>
+                    <option value="Graphic Storytelling">Graphic Storytelling</option>
+                    <option value="International Sales and Marketing Management">International Sales and Marketing Management</option>
+                    <option value="Marketing Management">Marketing Management</option>
+                    <option value="Materials Science Engineering">Materials Science Engineering</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Software Technology Engineering">Software Technology Engineering</option>
+                    <option value="Value Chain Management">Value Chain Management</option>
+                </select>
+            </div>
+            <div> Hometown </div> <input type="text" @bind-value="hometown">
+            <div> Hobbies </div> <input type="text" @bind-value="hobbies">
+        </div>
+
+        <div>
+            <button @onclick="search"> search </button>
+            <button @onclick="clear"> clear </button>
+        </div>
+        <div>
+            <label> @message</label>
+        </div>
+
+
+        <TableTemplate Items="result">
+            <TableHeader>
+                <th>Username</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Sex</th>
+                <th>Age</th>
+                <th>Birthday</th>
+                <th>Hobbies</th>
+                <th>Major</th>
+                <th>Hometown</th>
+                <th>Description</th>
+            </TableHeader>
+            <RowTemplate>
+                <td >@context.username</td>
+                <td>@context.firstname</td>
+                <td>@context.lastname</td>
+                <td>@context.sex</td>
+                <td>@context.age</td>
+                <td>@context.birthday</td>
+                <td>@context.hobbies</td>
+                <td>@context.major</td>
+                <td>@context.hometown</td>
+                <td>@context.description</td>
+            </RowTemplate>
+        </TableTemplate>
+
+    </div>
+</div>
+
+
+@code {
+
+    public string username { set; get; }
+
+    public string password { set; get; }
+
+    public string firstname { set; get; }
+
+    public string lastname { set; get; }
+
+    public int age { set; get; }
+
+    public string sex { set; get; }
+
+    public string birthday { set; get; }
+
+    public string hobbies { set; get; }
+
+    public string major { set; get; }
+
+    public string hometown { set; get; }
+
+    public string description { set; get; }
+
+    public string message { set; get; }
+
+    public List<User> result = new List<User>();
+
+    protected override void OnInitialized()
+    {
+        result = userService.getAllUsers();
+        sex = "M";
+    }
+
+  
+    
+    
+
+    public async Task search()
+    {
+        SearchUser user = new SearchUser()
+        {
+            username = this.username,
+            firstname = this.firstname,
+            lastname = this.lastname,
+            sex = this.sex,
+            major = this.major,
+            hometown = this.hometown,
+            hobbies = this.hobbies,
+        };
+        result = userService.searchUsers(user);
+    }
+
+
+    public async Task clear()
+    {
+    }
+
+
+    public void setMajor(ChangeEventArgs args)
+    {
+        string result = args.Value.ToString();
+        major = result;
+    }
+
+    public void setSex(ChangeEventArgs args)
+    {
+        string result = args.Value.ToString();
+        sex = result;
+    }
+
+
+
+
+
+
+
+
+
+}

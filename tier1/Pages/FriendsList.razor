@@ -1,0 +1,193 @@
+﻿@page "/FriendsList"
+@using tier1.Models
+@using tier1.Data
+@using tier1.Services
+@inject NavigationManager NavigationManager
+
+        <div class="same">
+            <div id="menu">
+                <h3 id="h3prof">BuddieFinder</h3>
+                <NavLink href="friendslist" class="up"> Friends list</NavLink>
+                <NavLink href="chat" class="up">Chat</NavLink>
+                <NavLink href="profileview" class="up">Profile</NavLink>
+                <NavLink href="search" class="up">Search</NavLink>
+                <NavLink href="FriendRequest" class="up">FriendRequest</NavLink>
+
+
+            </div>
+            <div id="friendList">
+                <h5>Username</h5>
+                <TableTemplate Items="friendslist">
+                    <RowTemplate>
+                        <td @onclick="() => checkProfile(context)">@context </td>
+                    </RowTemplate>
+                </TableTemplate>
+
+            </div>
+            <div id="profileInfo">
+                <h4 > Profile info </h4>
+                <div class="vInfo">
+                    <label>username: </label>
+                    <label>@username</label>
+                </div>
+
+                <div class="vInfo">
+                    <label>Firstname: </label>
+                    <label>@firstname</label>
+                </div>
+
+                <div class="vInfo">
+                    <label>Lastname: </label>
+                    <label>@lastname</label>
+                </div>
+                <div class="vInfo">
+                    <label>Age: </label>
+                    <label>@age</label>
+                </div>
+                <div class="chInfo">
+                    <label>Sex: </label>
+                    <label>@sex</label>
+                </div>
+                <div class="vInfo">
+                    <label>Birthday: </label>
+                    <label>@birthday</label>
+                </div>
+                <div class="vInfo">
+                    <label>Hobbies: </label>
+                    <label>@hobbies</label>
+                </div>
+                <div class="vInfo">
+                    <label>Major: </label>
+                    <label>@major</label>
+                </div>
+                <div class="vInfo">
+                    <label>Hometown: </label>
+                    <label>@hometown</label>
+                </div>
+                <div class="vInfo">
+                    <label>Description: </label>
+                    <label>@description</label>
+                </div>
+
+
+            </div>
+
+            <div id="textBox">
+                <button @onclick="delete"> delete </button>
+            </div>
+
+        </div>
+
+@code {
+    
+    public string username { set; get; }
+
+    public string password { set; get; }
+
+    public string firstname { set; get; }
+
+    public string lastname { set; get; }
+
+    public int age { set; get; }
+
+    public string sex { set; get; }
+
+    public string birthday { set; get; }
+
+    public string hobbies { set; get; }
+
+    public string major { set; get; }
+
+    public string hometown { set; get; }
+
+    public string description { set; get; }
+    
+    
+    private int index;
+    public string friend = "";
+    IFriendService _friendService=new friendService();
+    List<Friend> Templist = new List<Friend>();
+    IChatMessageService chatMessageService=new chatMessageService();
+    IUserService _userService=new UserService();
+    List<string> friendslist=new List<string>();
+    List<ChatMessage> chatMessagelist=new List<ChatMessage>();
+    List<string> resultList=new List<string>();
+    private ChatMessage _chatMessage=new ChatMessage();
+    
+    protected override void OnInitialized()
+    {
+        Templist.Clear();
+        friendslist.Clear();
+        Templist = _friendService.getFriends(_userService.getcurrentName());
+        Console.WriteLine(Templist.Count);
+        chatMessagelist.Clear();
+        foreach (var f in Templist)
+        {
+            if (f.username1 != _userService.getcurrentName() && f.accept.Equals(true))
+            {
+                friendslist.Add(f.username1);
+            }
+            else if (f.username2 != _userService.getcurrentName() && f.accept.Equals(true))
+            {
+                friendslist.Add(f.username2);
+            }
+        }
+    }
+
+    public async Task checkProfile(string username)
+    {
+        User user=_userService.getUserInfo(username);
+        friend = username;
+        this.username = username;
+        firstname = user.firstname;
+        lastname = user.lastname;
+        age = user.age;
+        sex = user.sex;
+        birthday = user.birthday;
+        hobbies = user.hobbies;
+        hometown = user.hometown;
+    }
+
+    public async Task delete()
+    {
+       var username1 = _userService.getcurrentName();
+        var username2 = friend;
+        _friendService.delete(username1,username2);
+        OnInitialized();
+    }
+    
+    
+    
+    public async Task chat()
+    {
+        NavigationManager.NavigateTo("/Login");
+        resultList.Clear();
+        friend = username;
+        chatMessagelist = chatMessageService.getAllMessages(_userService.getcurrentName(), username);
+        foreach (var msg in chatMessagelist)
+        {
+            if (msg.nameSend == _userService.getcurrentName())
+            {
+                resultList.Add("Me"+":"+msg.message);
+            }
+            else
+            {
+                resultList.Add(msg.nameSend+":"+msg.message);
+            }
+        }
+    }
+
+    public void sendMessage()
+    {
+        ChatMessage chatMessage = new ChatMessage
+        {
+            message = _chatMessage.message,
+            nameReceived = friend,
+            nameSend = _userService.getcurrentName()
+        };
+        chatMessageService.sendMessage(chatMessage);
+        
+    }
+
+    
+}

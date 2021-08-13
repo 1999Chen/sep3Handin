@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="sep.db" uuid="e6babccc-e9c3-4252-a33d-937abfc10155">
+    <data-source source="LOCAL" name="sep.db" uuid="9f3a7380-4427-4797-9c84-2d28416c8f76">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$USER_HOME$/Desktop/sep.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/sep3tier3/sep.db</jdbc-url>
     </data-source>
   </component>
 </project>

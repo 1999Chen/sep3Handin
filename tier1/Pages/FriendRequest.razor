@@ -1,0 +1,186 @@
+﻿@page "/FriendRequest"
+@using tier1.Models
+@using tier1.Data
+@using tier1.Services
+@inject NavigationManager NavigationManager
+
+    <div class="same">
+        <div id="menu">
+            <h3 id="h3prof">BuddieFinder</h3>
+            <NavLink href="friendslist" class="up"> Friends list</NavLink>
+            <NavLink href="chat" class="up">Chat</NavLink>
+            <NavLink href="profileview" class="up">Profile</NavLink>
+            <NavLink href="search" class="up">Search</NavLink>
+            <NavLink href="FriendRequest" class="up">FriendRequest</NavLink>
+
+        </div>
+        <div id="friendList">
+            <h5>New request</h5>
+            <TableTemplate Items="requestList">
+                <RowTemplate>
+                    <td @onclick="() => checkProfile(context)">@context </td>
+                </RowTemplate>
+            </TableTemplate>
+
+        </div>
+        <div id="profileInfo">
+            <h4> Profile info </h4>
+            <div class="vInfo">
+                <label>username: </label>
+                <label>@username</label>
+            </div>
+
+            <div class="vInfo">
+                <label>Firstname: </label>
+                <label>@firstname</label>
+            </div>
+
+            <div class="vInfo">
+                <label>Lastname: </label>
+                <label>@lastname</label>
+            </div>
+            <div class="vInfo">
+                <label>Age: </label>
+                <label>@age</label>
+            </div>
+            <div class="chInfo">
+                <label>Sex: </label>
+                <label>@sex</label>
+            </div>
+            <div class="vInfo">
+                <label>Birthday: </label>
+                <label>@birthday</label>
+            </div>
+            <div class="vInfo">
+                <label>Hobbies: </label>
+                <label>@hobbies</label>
+            </div>
+            <div class="vInfo">
+                <label>Major: </label>
+                <label>@major</label>
+            </div>
+            <div class="vInfo">
+                <label>Hometown: </label>
+                <label>@hometown</label>
+            </div>
+            <div class="vInfo">
+                <label>Description: </label>
+                <label>@description</label>
+            </div>
+
+
+        </div>
+
+
+        <div id="agreeButton">
+            <button @onclick="agree"> agree </button>
+            <button @onclick="disagree"> disagree </button>
+        </div>
+
+
+        <div id="searchfriendtext">
+            <input @bind-value="usernameToSend">
+            <button @onclick="sendRequest">Send request</button>
+
+        </div>
+
+        <div>@message</div>
+    </div>
+
+@code {
+    
+    
+    public string username { set; get; }
+
+    public string usernameToSend { set; get; }
+    
+    public string password { set; get; }
+
+    public string firstname { set; get; }
+
+    public string lastname { set; get; }
+
+    public int age { set; get; }
+
+    public string sex { set; get; }
+
+    public string birthday { set; get; }
+
+    public string hobbies { set; get; }
+
+    public string major { set; get; }
+
+    public string hometown { set; get; }
+
+    public string description { set; get; }
+    
+    public string message { set; get; }
+    
+    private int index;
+ 
+    IFriendService _friendService=new friendService();
+    List<Friend> Templist = new List<Friend>();
+    IUserService _userService=new UserService();
+
+    List<string> requestList=new List<string>();
+    
+    
+    
+    protected override void OnInitialized()
+    {
+        Templist.Clear();
+         requestList.Clear();
+        Templist = _friendService.getFriends(_userService.getcurrentName());
+        Console.WriteLine(Templist.Count);
+        Templist = _friendService.getRequests(_userService.getcurrentName());
+   
+        foreach (var f in Templist)
+        {
+            requestList.Add(f.username1);
+           
+        }
+    }
+
+    public async Task checkProfile(string username)
+    {
+        User user = _userService.getUserInfo(username);
+        this.username = username;
+        firstname = user.firstname;
+        lastname = user.lastname;
+        age = user.age;
+        sex = user.sex;
+        birthday = user.birthday;
+        hobbies = user.hobbies;
+        hometown = user.hometown;
+        Console.WriteLine("update ok");
+    }
+
+    public void agree()
+    {
+        var f = new Friend
+        {
+            username1 = username,
+            username2 = _userService.getcurrentName()
+        };
+        _friendService.agree(f);
+        OnInitialized();
+    }
+
+    public void disagree()
+    {
+        _friendService.delete(username,_userService.getcurrentName());
+        OnInitialized();
+    }
+
+
+    public void sendRequest()
+    {
+       _friendService.sendRequest(_userService.getcurrentName(),usernameToSend);
+        OnInitialized();
+    }
+    
+    
+   
+
+    
+}

@@ -1,0 +1,112 @@
+﻿@page "/Chat"
+@using tier1.Models
+@using tier1.Data
+@using tier1.Services
+
+        <div class="same">
+            <div id="menu">
+                <h3 id="h3prof">BuddieFinder</h3>
+                <NavLink href="friendslist" class="up"> Friends list</NavLink>
+                <NavLink href="chat" class="up">Chat</NavLink>
+                <NavLink href="profileview" class="up">Profile</NavLink>
+                <NavLink href="search" class="up">Search</NavLink>
+                <NavLink href="FriendRequest" class="up">FriendRequest</NavLink>
+
+            </div>
+            <div id="chatList">
+                <h5>Username</h5>
+                <TableTemplate Items="friendslist">
+                    <RowTemplate>
+                        <td @onclick="() => startChat(context)">@context </td>
+                    </RowTemplate>
+                </TableTemplate>
+
+            </div>
+            <div id="chatBox" type="input" readonly>
+                <TableTemplate Items="resultList">
+                    <RowTemplate>
+                        <td> @context </td>
+                    </RowTemplate>
+                </TableTemplate>
+
+
+            </div>
+            <div id="textBox1">
+                <label>To @friend:</label>
+
+                <input @bind-value="_chatMessage.message"><button @onclick="sendMessage">send</button>
+            </div>
+        </div>
+
+@code {
+    private int index;
+    public string friend = "";
+    IFriendService _friendService=new friendService();
+    List<Friend> Templist = new List<Friend>();
+    IChatMessageService chatMessageService=new chatMessageService();
+    IUserService _userService=new UserService();
+    List<string> friendslist=new List<string>();
+    List<ChatMessage> chatMessagelist=new List<ChatMessage>();
+    List<string> resultList=new List<string>();
+    private ChatMessage _chatMessage=new ChatMessage();
+
+    
+
+    
+    protected override void OnInitialized()
+    {
+        Templist.Clear();
+        friendslist.Clear();
+        Templist = _friendService.getFriends(_userService.getcurrentName());
+        Console.WriteLine(Templist.Count);
+        chatMessagelist.Clear();
+        foreach (var f in Templist)
+        {
+            if (f.username1 != _userService.getcurrentName() && f.accept.Equals(true))
+            {
+                friendslist.Add(f.username1);
+            }
+            else if (f.username2 != _userService.getcurrentName() && f.accept.Equals(true))
+            {
+                friendslist.Add(f.username2);
+            }
+        }
+    }
+
+    
+    public async Task startChat(string username)
+    {
+        resultList.Clear();
+        friend = username;
+        chatMessagelist = chatMessageService.getAllMessages(_userService.getcurrentName(), username);
+        foreach (var msg in chatMessagelist)
+        {
+            Console.WriteLine(msg.date);
+            if (msg.nameSend == _userService.getcurrentName())
+            {
+                resultList.Add(msg.date);
+                resultList.Add("Me"+":"+msg.message);
+            }
+            else
+            {
+                resultList.Add(msg.date);
+                resultList.Add(msg.nameSend+":"+msg.message);
+            }
+        }
+
+    }
+
+    public void sendMessage()
+    {
+        ChatMessage chatMessage = new ChatMessage
+        {
+            message = _chatMessage.message,
+            nameReceived = friend,
+            nameSend = _userService.getcurrentName()
+        };
+        chatMessageService.sendMessage(chatMessage);
+        startChat(friend);
+    }
+
+    
+}

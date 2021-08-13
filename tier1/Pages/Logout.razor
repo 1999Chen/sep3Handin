@@ -1,0 +1,20 @@
+﻿@page "/Logout"
+@using tier1.Data
+@using tier1.Authentication
+@inject IJSRuntime JSRuntime;
+
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+<h3>Logout</h3>
+
+@code {
+
+    protected override void OnInitialized()
+    {
+        IUserService _userService = new UserService();
+        ((CustomAuthenticationStateProvider) AuthenticationStateProvider).Logout();
+        _userService.logout();
+        NavigationManager.NavigateTo("/");
+    }
+
+}

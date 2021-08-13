@@ -1,0 +1,109 @@
+﻿@page "/"
+@using tier1.Models
+@using tier1.Authentication
+@using tier1.Data
+@using System.Threading
+@namespace LoginComponent
+@inject IJSRuntime JSRuntime;
+
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+
+<AuthorizeView>
+    <NotAuthorized>
+        <div id="header">
+            <h1 >Socializing!</h1>
+            <p id="unHead">your personal helper for making freinds</p>
+        </div>
+
+        <div id="gif1">
+            <img src="pic1.gif" alt="gif1">
+        </div>
+
+
+        <div id="logIn">
+            <div >Username </div> <input type="text" placeholder="username" @bind-value="username"/>
+            <div id="password"> Password </div> <input type="password" placeholder="password" @bind-value="password"/>
+            <div id="LogButt" @onclick="PerformLogin"> Log in </div>
+            <div style="color:red">@message</div>
+            <div id="signUp">
+                <div >Aren't signed up yet?</div>
+                <NavLink class="nav-link" id="signUpLink" href="Register">Don't miss a chance and do it now!</NavLink>
+            </div>
+        </div>
+
+        <div id="gif2">
+            <img src="pic2.gif" alt="gif2">
+        </div>
+
+    </NotAuthorized>
+    <Authorized></Authorized>
+
+</AuthorizeView>
+
+
+@code {
+    private User CurrentPerson;
+
+    private string message;
+    public string username { set; get; }
+
+    public string password { set; get; }
+    
+
+
+    IUserService client = new UserService();
+
+    public async Task PerformLogin()
+    {
+        message = "";
+        try
+        {
+            client.Connect();
+            Thread.Sleep(100);
+            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(username, password);
+            client.setcurrentName(username);
+            NavigationManager.NavigateTo("/ProfileView");
+            message = "Login succeed!";
+        }
+        catch (Exception e)
+        {
+            message = "Username or password is incorrect!";
+            Console.WriteLine(e);
+        }
+        
+    }
+
+ 
+    
+
+    public async Task PerformLogout()
+    {
+        message = "";
+        username = "";
+        password = "";
+        try
+        {
+            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).Logout();
+            NavigationManager.NavigateTo("/Login");
+            message = "Logout succeed!";
+        }
+        catch (Exception e)
+        {
+            message = e.Message;
+        }
+    }
+
+    public async Task PerformRegister(string username, string password)
+    {
+        client.RegisterUser(username, password);
+    }
+
+
+
+
+
+
+
+
+}

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using sep3tier3.Data;
 using sep3tier3.Models;
@@ -18,21 +19,20 @@ namespace sep3tier3.Controllers
         }
 
         [HttpPost("Login")]
-        public IActionResult Login([FromBody] User loginuser)
+        public IActionResult Login([FromBody]LoginUser loginUser)
         {
-            var user = userService.LoginUser(loginuser);
+            Console.WriteLine(loginUser);
+            var result = userService.LoginUser(loginUser.username,loginUser.password);
 
-            if (user == null)
+            if (result == "F")
             {
-                return BadRequest(new {message = "username or password is incorrect"});
+                Console.WriteLine("tier 3 log in INFORMATION is wrong");
+                return BadRequest(new {message = "Username or password is incorrect"});
             }
 
-            return Ok(new User
-            {
-                username = loginuser.username,
-                password = loginuser.password
-            });
+            return Ok(new {message = "Login success"});
         }
+       
 
         [HttpPost("Register")]
         public IActionResult Register([FromBody] User registeruser)
@@ -41,44 +41,70 @@ namespace sep3tier3.Controllers
 
             if (user == null)
             {
-                return BadRequest(new {message = "user exists"});
+                return BadRequest(new {message = "User exists"});
             }
 
-            return Ok(user);
+            Console.WriteLine("asdasd");
+            return Ok(new {message="Register succedds!"});
         }
 
+        
+        
 
-        [HttpPut("username")]
-        public IActionResult EditUserInfo([FromBody] User tobeEdituser)
+        [HttpPost("EditUser")]
+        public IActionResult EditUserInfo([FromBody] User user)
         {
             try
             {
                 //Update user
-                userService.editInfo(tobeEdituser);
-                return Ok();
+                userService.editInfo(user);
+                Console.WriteLine("tier 3 edit controller");
+                return Ok(new {message="ok"});
             }
             catch (Exception e)
             {
                 return BadRequest(new {message = e.Message});
             }
-          
+        }
+
+
+        [HttpGet]
+        public IActionResult GetAllUsers()
+        {
+           Console.WriteLine("GET USETS");
+            return Ok(userService.getAllUsers());
+           
         }
         
-
-        [HttpGet("GetUsersByInfo")]
-        public IActionResult GetUsersByInfo(int minage,int maxage,[FromBody] User userTo)
+        
+        [HttpGet("GetUserInfo/{username}")]
+        public IActionResult GetUserInfo(string username)
         {
-            var list = userService.getUsersByInfo(userTo.firstname, userTo.lastname, userTo.sex,
-                userTo.major, userTo.hometown, maxage, minage, userTo.hobbies);
+            Console.WriteLine("tier 3 getUserInfo");
+            User user = userService.getUser(username);
+            if (user!= null)
+            {
+                return Ok(user);
+            }
+            Console.WriteLine(username);
+            return BadRequest("username not found");
+        }
+        //username};{firstname};{lastname};{sex};{major};{hometown};{hobbies
+        //string username,string firstname,string lastname,string sex,string major,string hometown,string hobbies
+        [HttpGet( "searchUsers/{searchUser}")]
+        public IActionResult SearchUsers(String searchUser)
+        {
+            SearchUser search = JsonSerializer.Deserialize<SearchUser>(searchUser);
+            var list = userService.searchUsers(search);
             return Ok(list);
         }
-        
-        
-        
-        
-        
-        
-        
+
+        [HttpPost("chatMessages")]
+        public IActionResult storeMessage([FromBody] ChatMessage chatMessage)
+        {
+            userService.storeMessage(chatMessage);
+            return Ok();
+        }
         
         
     }

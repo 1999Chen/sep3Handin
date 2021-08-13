@@ -2,12 +2,19 @@ package shared;
 
 public enum RequestTypes
 {
+
     LOGIN,
     REGISTER,
     EDITINFO,
     SENDMESSAGE,
+    GETUSERINFO,
+    GETREQUEST,
+    GETFRIENDS,
+    DELETE,
     LOGOUT,
+    AGREE,
     SENDFRIENDREQUEST,
-    GETUSERS,
-    GETUSERSBYINFO,
+    GETALLUSERS,
+    SEARCHUSERS,
+    GETMESSAGES,
 }

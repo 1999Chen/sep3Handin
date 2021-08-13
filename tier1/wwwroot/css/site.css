@@ -1,0 +1,265 @@
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+html, body {
+    font-family: "Comic Sans MS", serif;
+    background: #fcfabd;
+}
+.same{
+    width: 1200px;
+    height: 125vh;
+    background: #fce2ac;
+    border-left: 10px solid #dbbd7d;
+    border-right: 10px solid #dbbd7d;
+    margin: auto;
+}
+
+#header{
+    text-align: center;
+}
+
+h1 {
+    font-family: "Lucida Handwriting", serif;
+    color: #1fdbd5;
+}
+
+#unHead{
+    font-family: "Comic Sans MS", serif;
+    color: #3bd9c6;
+    font-size: x-small;
+    padding-bottom: 30px;
+}
+
+#logIn{
+    width: 320px;
+    height: 300px;
+    padding: 45px;
+    background: #34ce57;
+    border: 5px solid green;
+    font-family: "Comic Sans MS", serif;
+    font-size: small;
+    margin: auto;
+}
+
+#password{
+    padding-top: 15px;
+}
+
+#LogButt{
+    padding-top: 15px;
+}
+
+#signUp{
+    padding-top: 25px;
+    color: white;
+}
+
+#signUpLink{
+    padding-left: -10px;
+}
+
+#gif1{
+    float: left;
+}
+
+#gif2{
+    position: absolute;
+    top: 180px;
+    right: 10px;
+    float: right;
+}
+
+
+
+h3{
+    font-family: "Lucida Handwriting", serif;
+    color: #1fdbd5;
+}
+
+#SignInfo{
+    padding-left: 100px;
+    float: left;
+    
+}
+
+.info{
+    font-family: "Comic Sans MS", serif;
+    padding-top: 10px;
+       
+}
+
+label{
+    width: 180px;
+    display: inline-block;
+}
+
+button {
+    font-family: "Comic Sans MS", serif;
+}
+
+#SignDone{
+    font-family: "Comic Sans MS", serif;
+    float: left;
+    padding-top: 20px;
+}
+
+#pic3a{
+    
+    margin: auto;
+    padding-left: 100px;
+    max-width: 1%;
+    max-height: 1%;
+}
+
+#pic4a{
+    margin: auto;
+    padding-left: 100px;
+    padding-top: 120px;
+    max-width: 1%;
+    max-height: 1%;
+}
+
+.up{
+    font-family: "Comic Sans MS", serif;
+    float: left;
+    padding-left: 100px;
+    padding-top: 7px;
+}
+#h3prof{
+    float: left;
+    padding-bottom: 2px;
+}
+
+#menu{
+    border-bottom: 3px solid #f5d695;
+}
+#menu1{
+    border-bottom: 3px solid #f5d695;
+}
+#viewInfo{
+    float: left;
+    margin-left: 100px;
+    padding-left: -100px;
+    width: 500px;
+    padding-top: 80px;
+}
+
+#friendList
+{
+    position: relative;
+    top: 60px;
+    right: 50px;
+    width: 150px;
+    height: 600px;
+    float: left;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    background:#f5d695
+}
+
+
+#profileInfo{
+    position: static;
+    float: left;
+    top: 58px;
+    right: 1700px;
+    margin-left: -10px;
+    padding-left: 0px;
+    margin-top: 80px;
+    width: 500px;
+    padding-top: 50px;
+}
+
+
+#change{
+    float: right;
+    padding-top: 20px;
+    padding-right: 200px;
+    width: 400px;
+}
+
+#searchbox{
+    padding-top: 50px;
+}
+
+
+
+
+.chInfo {
+    font-family: "Comic Sans MS", serif;
+    padding-top: 10px;
+}
+#viewInfo{
+    float: left;
+    top: 290px;
+    margin-left: 0px;
+    padding-left: -100px;
+    padding-top: 20px;
+    
+}
+h4{
+    font-family: "Comic Sans MS", serif;
+}
+.vInfo{
+    padding-top: 10px;
+}
+#chatList{
+    position: relative;
+    top: 50px;
+    right: 50px;
+    width: 150px;
+    height: 600px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    background: #f5d695 ;
+}
+
+#searchfriendtext{
+    border: 5px ;
+    position: static;
+    border-left: 50px;
+    left: 600px;
+    bottom: 150px;
+    width: 500px;
+    height: 200px;
+    float: right;
+}
+#agreeButton{
+    float: left;
+    margin-top: 500px;
+   
+    left: 100px;
+    bottom: 100px;
+}
+
+
+
+#chatBox{
+    position: relative;
+    left: 310px;
+   
+    bottom: 550px;
+    right: 200px;
+    width: 760px;
+    height: 600px;
+    float: left;
+    padding:20px;
+    border: 5px solid #28a745;
+    background: #f5d695;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    margin-left: 20px;
+}
+#textBox{
+    position: relative;
+    float: bottom;
+    top: 700px;
+    
+    right:200px;
+}
+#textBox1{
+    position: relative;
+    bottom: -55px;
+    left: -350px;
+}
+
+

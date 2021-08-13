@@ -1,0 +1,44 @@
+﻿@page "/Register"
+@inject NavigationManager NavigationManager
+@using tier1.Services
+@using tier1.Data
+
+
+<div class="form-group">
+            <label>User name:</label>
+            <input type="text" placeholder="user name" @bind-value="username"/>
+        </div>
+<div class="form-group">
+            <label>Password:</label>
+            <input type="text" placeholder="user name" @bind-value="password"/>
+        </div>
+<button @onclick="RegisterNewUser">
+    Register
+</button>
+
+<div><label> @message</label></div>
+@code {
+
+    public string username;
+    public string password;
+    public string message;
+    public IUserService clicent=new UserService();
+
+    
+
+    public void RegisterNewUser()
+    {
+        clicent.Connect();
+        clicent.RegisterUser(username, password);
+        message = "Register succedds!";
+        NavigationManager.NavigateTo("/SignUp");
+
+    }
+    
+    
+    
+
+
+
+
+}

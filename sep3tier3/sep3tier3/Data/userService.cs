@@ -12,27 +12,21 @@ using sep3tier3.DataAccess;
 using sep3tier3.Models;
 
 
-
 namespace sep3tier3.Data
 {
     public class userService : IUserService
     {
-        private string msgFile = "msgs.json";
-        private List<User> users;
-        sepDBContext dbcontext = new sepDBContext();
-        friendService _friendService = new friendService();
+        private string msgFile = "users.json";
+
+        sepDBContext dbcontext;
+        friendService _friendService;
 
         public userService()
         {
-            string content = File.ReadAllText(msgFile);
-            users = JsonSerializer.Deserialize<List<User>>(content);
+            dbcontext = new sepDBContext();
+            _friendService = new friendService();
         }
 
-        private void WriteToFile()
-        {
-            string productsAsJson = JsonSerializer.Serialize(users);
-            File.WriteAllText(msgFile, productsAsJson);
-        }
 
         public User RegisterUser(User user)
         {
@@ -40,34 +34,34 @@ namespace sep3tier3.Data
             {
                 return null;
             }
-            
+
             dbcontext.Users.Add(user);
-            users.Add(user);
             dbcontext.SaveChanges();
-            WriteToFile();
             return user;
         }
 
-        public User LoginUser(User user)
+        public string LoginUser(string username, string password)
         {
-            var existingUser = dbcontext.Users.SingleOrDefault(x => x.username == user.username);
-
+            Console.WriteLine("loging userService");
+            var existingUser = dbcontext.Users.SingleOrDefault(x => x.username == username);
+            Console.WriteLine(existingUser);
             if (existingUser != null)
             {
-                if (existingUser.password.Equals(user.password))
+                if (existingUser.password==password)
                 {
-                    return user;
+                    return "T";
                 }
 
-                return null;
+                return "F";
             }
 
-            return null;
+            return "F";
         }
 
         public void editInfo(User user)
         {
             var loginUser = dbcontext.Users.Find(user.username);
+            loginUser.password = user.password;
             loginUser.firstname = user.firstname;
             loginUser.lastname = user.lastname;
             loginUser.sex = user.sex;
@@ -76,35 +70,176 @@ namespace sep3tier3.Data
             loginUser.description = user.description;
             loginUser.hobbies = user.hobbies;
             loginUser.hometown = user.hometown;
-            loginUser.profilePicture = user.profilePicture;
+            loginUser.birthday = user.birthday;
+            // loginUser.birthday
             dbcontext.SaveChanges();
         }
 
-        public IEnumerable<User> getAllUsers()
+        public List<User> getAllUsers()
         {
-            return dbcontext.Users;
-        }
-
-        public List<User> getUsersByInfo(string firstname, string lastname, string sex, 
-            string major, string hometown, int maxage, int minage, string hobbies)
-        {
-            var users = getAllUsers();
-
-            List<User> list = new List<User>();
-
-            foreach (User user in users)
+            var IEList = dbcontext.Users;
+            var list = new List<User>();
+            foreach (var user in IEList)
             {
-                if (user.firstname.Contains(firstname) && user.lastname.Contains(lastname) && user.sex.Contains(sex) &&
-                    user.age >= minage && user.age <= maxage &&
-                    user.hobbies.Contains(hobbies) && user.major.Contains(major) && user.hometown.Contains(hometown))
-                {
-                    list.Add(user);
-                }
+                list.Add(user);
             }
 
             return list;
         }
-        
+
+        public User getUser(string username)
+        {
+            var users = getAllUsers();
+            foreach (var user in users)
+            {
+                if (user.username == username)
+                {
+                    return user;
+                }
+            }
+
+            return null;
+        }
+
+        public List<User> searchUsers(SearchUser searchUser)
+        {
+            List<User> users = getAllUsers();
+            List<User> searchUsers = new List<User>();
+            string username = searchUser.username;
+            string firstname = searchUser.firstname;
+            string lastname = searchUser.lastname;
+            string sex = searchUser.sex;
+            string major = searchUser.major;
+            string hometown = searchUser.hometown;
+            string hobbies = searchUser.hobbies;
+            
+            if (!String.IsNullOrEmpty(username))
+            {
+                foreach (User user in users)
+                {
+                    if (user.username == username)
+                    {
+                        searchUsers.Add(user);
+                    }
+                }
+
+                users.Clear();
+                foreach (var u in searchUsers)
+                {
+                    users.Add(u);
+                }
+                searchUsers.Clear();
+            }
+            if (!String.IsNullOrEmpty(firstname))
+            {
+                foreach (var user in users)
+                {
+                    if (user.firstname == firstname)
+                    {
+                        searchUsers.Add(user);
+                    }
+                }
+
+                users.Clear();
+                foreach (var u in searchUsers)
+                {
+                    users.Add(u);
+                }
+                searchUsers.Clear();
+            }
+            if (!String.IsNullOrEmpty(lastname))
+            {
+                foreach (var user in users)
+                {
+                    if (user.lastname == lastname)
+                    {
+                        searchUsers.Add(user);
+                    }
+                }
+                users.Clear();
+                foreach (var u in searchUsers)
+                {
+                    users.Add(u);
+                }
+                searchUsers.Clear();
+            }
+            if (!String.IsNullOrEmpty(sex))
+            {
+                foreach (var user in users)
+                {
+                    if (user.sex == sex)
+                    {
+                        searchUsers.Add(user);
+                    }
+                }
+
+                users.Clear();
+                foreach (var u in searchUsers)
+                {
+                    users.Add(u);
+                }
+                searchUsers.Clear();
+            }
+            if (!String.IsNullOrEmpty(major))
+            {
+                foreach (var user in users)
+                {
+                    if (user.major == major)
+                    {
+                        searchUsers.Add(user);
+                    }
+                }
+
+                users.Clear();
+                foreach (var u in searchUsers)
+                {
+                    users.Add(u);
+                }
+                searchUsers.Clear();
+            }
+            if (!String.IsNullOrEmpty(hometown))
+            {
+                foreach (var user in users)
+                {
+                    if (user.hometown == hometown)
+                    {
+                        searchUsers.Add(user);
+                    }
+                }
+
+                users.Clear();
+                foreach (var u in searchUsers)
+                {
+                    users.Add(u);
+                }
+                searchUsers.Clear();
+            }
+            if (!String.IsNullOrEmpty(hobbies))
+            {
+                foreach (var user in users)
+                {
+                    if (user.hobbies == hobbies)
+                    {
+                        searchUsers.Add(user);
+                    }
+                }
+
+                users.Clear();
+                foreach (var u in searchUsers)
+                {
+                    users.Add(u);
+                }
+                searchUsers.Clear();
+            }
+
+
+            return users;
+        }
+
+        public void storeMessage(ChatMessage chatMessage)
+        {
+            dbcontext.ChatMessages.Add(chatMessage);
+        }
 
         public void addFriend(User user1, User user2)
         {
@@ -116,24 +251,6 @@ namespace sep3tier3.Data
             };
             dbcontext.Friends.Add(friend);
             dbcontext.SaveChanges();
-        }
-
-
-        public List<Friend> getAllFriends(User user)
-        {
-            var friends = _friendService.getFriends();
-
-            List<Friend> list = new List<Friend>();
-
-            foreach (var friend in friends)
-            {
-                if (friend.username1.Equals(user.username) || friend.username2.Equals(user.username))
-                {
-                    list.Add(friend);
-                }
-            }
-
-            return list;
         }
     }
 }

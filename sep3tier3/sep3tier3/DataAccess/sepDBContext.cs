@@ -8,12 +8,11 @@ namespace sep3tier3.DataAccess
         public DbSet<User>Users { set; get; }
         public DbSet<ChatMessage>ChatMessages { set; get; }
         public DbSet<Friend>Friends { set; get; }
-        public DbSet<SocialLine>SocialLines { set; get; }
+  
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source = C:/Users/yu/Desktop/sep.db");
-
+            optionsBuilder.UseSqlite("Data Source = ./sep.db");
         }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)

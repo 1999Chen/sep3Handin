@@ -29,6 +29,9 @@ namespace sep3tier3
         {
             services.AddControllers();
             services.AddScoped<IUserService,userService>();
+            services.AddScoped<IFriendService, friendService>();
+            services.AddScoped<IChatMessageService, chatMessageService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

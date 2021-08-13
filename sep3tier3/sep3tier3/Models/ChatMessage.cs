@@ -9,12 +9,11 @@ namespace sep3tier3.Models
     {
         public string nameSend { set; get; }
         public string nameReceived { set; get; }
-
         [Key, NotNull] 
         public int id { set; get; }
-
         public string message { set; get; }
-        public DateTime date { set; get; }
-        public byte[] image { set; get; }
+        public string date { set; get; }
+        
+       
     }
 }

@@ -22,7 +22,175 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9e06418-06b2-44d9-b111-83fd72b36d70" name="Default Changelist" comment="" />
+    <list default="true" id="d9e06418-06b2-44d9-b111-83fd72b36d70" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../sep3tier2/.idea/.idea.sep3tier2.dir/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sep3tier2/.idea/.idea.sep3tier2.dir/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sep3tier2/.idea/.idea.sep3tier2.dir/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/src/main/java/APICommunication/APICommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/src/main/java/APICommunication/APICommunication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/src/main/java/Model/ChatMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/src/main/java/Model/ChatMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/src/main/java/Model/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/src/main/java/Model/Friend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/src/main/java/Model/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/src/main/java/Model/LoginUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/src/main/java/Model/Model.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/src/main/java/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/src/main/java/SocketServer/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/src/main/java/SocketServer/ServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/src/main/java/SocketServer/StartServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/src/main/java/SocketServer/StartServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/src/main/java/shared/RequestTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/src/main/java/shared/RequestTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/target/classes/APICommunication/APICommunication$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/target/classes/APICommunication/APICommunication$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/target/classes/APICommunication/APICommunication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/target/classes/APICommunication/APICommunication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/target/classes/Model/ChatMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/target/classes/Model/ChatMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/target/classes/Model/Friend.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/target/classes/Model/Friend.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/target/classes/Model/LoginUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/target/classes/Model/LoginUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/target/classes/Model/Model.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/target/classes/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/target/classes/Model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/target/classes/SocketServer/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/target/classes/SocketServer/ServerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/target/classes/SocketServer/StartServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/target/classes/SocketServer/StartServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sep3tier2/target/classes/shared/RequestTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sep3tier2/target/classes/shared/RequestTypes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sep3tier3/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sep3tier3/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.sep3tier3/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sep3tier3/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.sep3tier3/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sep3tier3/.idea/dataSources/e6babccc-e9c3-4252-a33d-937abfc10155.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sep3tier3/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.sep3tier3/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sep3tier3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sep3tier3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.sep3tier3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sep3tier3/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Controllers/chatMessagesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/Controllers/chatMessagesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Controllers/friendsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/Controllers/friendsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Controllers/msgController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Controllers/socialLinesController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Controllers/usersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/Controllers/usersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Data/IChatMessageService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/Data/IChatMessageService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Data/IFriendService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/Data/IFriendService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Data/ISocialLineService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Data/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/Data/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Data/chatMessageService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/Data/chatMessageService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Data/friendService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/Data/friendService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Data/socialLineService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Data/userService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/Data/userService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/DataAccess/sepDBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/DataAccess/sepDBContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Migrations/20201213183146_InitialCreate.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Migrations/20201213183146_InitialCreate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Migrations/sepDBContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/Migrations/sepDBContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Models/ChatMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/Models/ChatMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Models/SocialLine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/bin/Debug/netcoreapp3.1/sep3tier3.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/bin/Debug/netcoreapp3.1/sep3tier3.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/bin/Debug/netcoreapp3.1/sep3tier3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/bin/Debug/netcoreapp3.1/sep3tier3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/bin/Debug/netcoreapp3.1/sep3tier3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/bin/Debug/netcoreapp3.1/sep3tier3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/bin/Debug/netcoreapp3.1/sep3tier3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/bin/Debug/netcoreapp3.1/sep3tier3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/bin/Debug/netcoreapp3.1/sep3tier3.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/bin/Debug/netcoreapp3.1/sep3tier3.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/bin/Debug/netcoreapp3.1/sep3tier3.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/bin/Debug/netcoreapp3.1/sep3tier3.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/sep3tier3.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/sep3tier3.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/sep3tier3.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/sep3tier3.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/sep3tier3.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/sep3tier3.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/sep3tier3.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/sep3tier3.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/sep3tier3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/sep3tier3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/sep3tier3.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/sep3tier3.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/sep3tier3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/obj/Debug/netcoreapp3.1/sep3tier3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/obj/sep3tier3.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/obj/sep3tier3.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/obj/sep3tier3.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/obj/sep3tier3.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sep3tier3/sep3tier3.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/sep3tier3/sep3tier3.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/.idea/.idea.tier1.dir/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/.idea/.idea.tier1.dir/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/.idea/.idea.tier1.dir/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/.idea/.idea.tier1.dir/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/.idea/.idea.tier1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/.idea/.idea.tier1.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/.idea/.idea.tier1.dir/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Authentication/CustomAuthenticationStateProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Authentication/CustomAuthenticationStateProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Data/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Data/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Data/Impl/InMemoryUserService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Data/userService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Data/userService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Models/ChatMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Models/ChatMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Models/UserInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Pages/Index.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Pages/Login.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Pages/ManagePersonalInfo.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Pages/ManagePersonalInfo.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Pages/MyHomePage.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Pages/Register.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Pages/Register.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Pages/Search.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Pages/Search.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Pages/_Host.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Pages/_Host.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Persistence/ClientModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Persistence/FileContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Services/ISockets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Services/ISockets.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Services/RequestTypes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Services/RequestTypes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Services/Sockets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Services/Sockets.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Shared/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Shared/MainLayout.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Shared/NavMenu.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/bin/Debug/netcoreapp3.1/tier1.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/App.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/App.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/Error.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/Error.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/Index.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/Login.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/ManagePersonalInfo.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/ManagePersonalInfo.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/MyHomePage.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/Register.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/Register.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/Search.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/Search.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/TableTemplate.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/TableTemplate.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/_Host.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Pages/_Host.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Shared/MainLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Shared/MainLayout.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Shared/NavMenu.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Shared/NavMenu.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Shared/SurveyPrompt.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/Shared/SurveyPrompt.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/_Imports.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/Razor/_Imports.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/App.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/App.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Index.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Index.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Login.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/ManagePersonalInfo.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/ManagePersonalInfo.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/MyHomePage.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Register.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Register.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Search.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Search.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/TableTemplate.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/TableTemplate.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/MainLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/MainLayout.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/NavMenu.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/NavMenu.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/SurveyPrompt.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/Shared/SurveyPrompt.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/_Imports.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/_Imports.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/tier1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/tier1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/tier1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/RazorDeclaration/tier1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.RazorComponent.input.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.RazorComponent.input.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.RazorCoreGenerate.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.TagHelpers.output.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.TagHelpers.output.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/Debug/netcoreapp3.1/tier1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/tier1.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/tier1.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/obj/tier1.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/obj/tier1.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/tier1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/tier1.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/wwwroot/css/bootstrap/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/wwwroot/css/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/wwwroot/css/open-iconic/FONT-LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/wwwroot/css/open-iconic/FONT-LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/wwwroot/css/open-iconic/ICON-LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/wwwroot/css/open-iconic/ICON-LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/wwwroot/css/open-iconic/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/wwwroot/css/open-iconic/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/wwwroot/css/open-iconic/font/fonts/open-iconic.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/wwwroot/css/open-iconic/font/fonts/open-iconic.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tier1/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/../tier1/wwwroot/css/site.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,41 +206,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A646A1B6-9A6B-4695-9F2B-93D08BF1D8F7/C/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/697264F7-DE55-43E2-A20B-15912EC0ACA0/1/GenericHostBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/sep3tier3/Models/msg.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Data/msgService.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Data/ImsgService.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Controllers/WeatherForecastController.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/msgs.json" />
-        <option value="$PROJECT_DIR$/sep3tier3/Properties/launchSettings.json" />
-        <option value="$PROJECT_DIR$/sep3tier3/Startup.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Models/ChatMessage.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Models/SocialLine.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Models/User.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Controllers/msgController.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Controllers/userController.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Controllers/socialLineController.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Controllers/friendController.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Controllers/chatMessageController.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Data/IChatMessageService.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Data/ISocialLineService.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Data/IFriendService.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Data/friendService.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Models/Friend.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Data/chatMessageService.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Data/socialLineService.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/DataAccess/sepDBContext.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Data/userService.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Data/IUserService.cs" />
-        <option value="$PROJECT_DIR$/sep3tier3/Controllers/usersController.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/sep3tier3/Properties/launchSettings.json" />
+      <option value="$PROJECT_DIR$/sep3tier3/Controllers/usersController.cs" />
+      <option value="$PROJECT_DIR$/sep3tier3/Controllers/chatMessagesController.cs" />
+      <option value="$PROJECT_DIR$/sep3tier3/Data/chatMessageService.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1k7YDJRR3XzDpc6n3dB4pGmPGon" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -82,8 +230,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.5202312" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.19725433" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.29201102" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -91,6 +242,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.sep3tier3">
     <configuration name="sep3tier3" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -123,6 +275,10 @@
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Launch Settings Profile.sep3tier3" />
+      <item itemvalue=".NET Launch Settings Profile.sep3tier3: IIS Express" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -144,6 +300,14 @@
       <workItem from="1607879063672" duration="1280000" />
       <workItem from="1607881071248" duration="689000" />
       <workItem from="1607881817784" duration="5977000" />
+      <workItem from="1607943106235" duration="18799000" />
+      <workItem from="1607982384263" duration="13174000" />
+      <workItem from="1608036536368" duration="17782000" />
+      <workItem from="1608062488756" duration="21821000" />
+      <workItem from="1608153367015" duration="69768000" />
+      <workItem from="1608286984585" duration="392000" />
+      <workItem from="1628741064191" duration="13053000" />
+      <workItem from="1628816166860" duration="3142000" />
     </task>
     <servers />
   </component>
@@ -167,46 +331,46 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="999" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607884252041">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="999" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607884252041" />
-    <state width="1151" height="278" key="GridCell.Tab.0.bottom" timestamp="1605124886796">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1151" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605124886796" />
-    <state width="1151" height="278" key="GridCell.Tab.0.center" timestamp="1605124886796">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1151" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605124886796" />
-    <state width="1151" height="278" key="GridCell.Tab.0.left" timestamp="1605124886796">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1151" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605124886796" />
-    <state width="1151" height="278" key="GridCell.Tab.0.right" timestamp="1605124886796">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1151" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605124886796" />
-    <state x="943" y="255" key="Rider.ProjectTemplateDialog.Size" timestamp="1607629840541">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="943" y="255" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040@0.0.1920.1040" timestamp="1607629840541" />
-    <state x="1145" y="199" key="RiderGenerateDialog" timestamp="1607638657306">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1145" y="199" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607638657306" />
-    <state x="790" y="280" width="336" height="269" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1607884278241">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="790" y="280" width="336" height="269" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1607884278241" />
-    <state x="803" y="290" width="671" height="459" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1607691171629">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="803" y="290" width="671" height="459" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607691171629" />
-    <state x="971" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1605059941413">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="971" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605059941413" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/sep3tier3/Controllers/usersController.cs</url>
+          <line>46</line>
+          <properties documentPath="C:\Users\abc\Desktop\sep3UnnamedYet\sep3tier3\sep3tier3\Controllers\usersController.cs" initialLine="45" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/sep3tier3/Controllers/usersController.cs</url>
+          <line>89</line>
+          <properties documentPath="D:\c#\sep3UnnamedYet\sep3tier3\sep3tier3\Controllers\usersController.cs" initialLine="85" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/sep3tier3/Data/userService.cs</url>
+          <line>184</line>
+          <properties documentPath="D:\c#\sep3UnnamedYet\sep3tier3\sep3tier3\Data\userService.cs" initialLine="164" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/sep3tier3/Data/userService.cs</url>
+          <line>201</line>
+          <properties documentPath="D:\c#\sep3UnnamedYet\sep3tier3\sep3tier3\Data\userService.cs" initialLine="176" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/sep3tier3/Data/userService.cs</url>
+          <line>115</line>
+          <properties documentPath="D:\c#\sep3UnnamedYet\sep3tier3\sep3tier3\Data\userService.cs" initialLine="114" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/sep3tier3/Data/userService.cs</url>
+          <line>216</line>
+          <properties documentPath="D:\c#\sep3UnnamedYet\sep3tier3\sep3tier3\Data\userService.cs" initialLine="192" />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

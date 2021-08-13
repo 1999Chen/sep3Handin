@@ -1,0 +1,53 @@
+﻿@page "/ManagePersonalInfo"
+
+
+<div class="form-group">
+                  <label>Name:</label>
+                  <input type="text" placeholder="user name" @bind-value="name"/>
+              </div>
+        <div class="form-group">
+            <label>Sex:</label>
+            <input type="text" placeholder="user name" @bind-value="sex"/>
+        </div>
+        <div class="form-group">
+            <label>Age:</label>
+            <input type="text" placeholder="user name" @bind-value="age"/>
+        </div>
+        <div class="form-group">
+            <label>Hometown:</label>
+            <input type="text" placeholder="user name" @bind-value="hometown"/>
+        </div>
+        <div class="form-group">
+            <label>Major:</label>
+            <input type="text" placeholder="user name" @bind-value="major"/>
+        </div>
+        <div class="form-group">
+            <label>Friends:</label>
+            <input type="text" placeholder="user name" @bind-value="friends"/>
+        </div>
+        <div class="form-group">
+            <button @onclick="update" text="Update"/>
+        </div>
+
+@code {
+    public string name;
+    public string sex;
+    public int age;
+    public string hometown;
+    public string major;
+    public int friends;
+
+
+    public void update()
+    {
+        
+    }
+
+
+
+
+
+
+
+
+}

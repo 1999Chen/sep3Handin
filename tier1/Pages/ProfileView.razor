@@ -1,0 +1,261 @@
+﻿@page "/ProfileView"
+@using tier1.Models
+@inject NavigationManager NavigationManager
+@using tier1.Data
+
+
+<div class="same">
+    <div id="menu">
+        <h3 id="h3prof">BuddieFinder</h3>
+        <NavLink href="friendslist" class="up"> Friends list</NavLink>
+        <NavLink href="chat" class="up">Chat</NavLink>
+        <NavLink href="profileview" class="up">Profile</NavLink>
+        <NavLink href="search" class="up">Search</NavLink>
+        <NavLink href="FriendRequest" class="up">FriendRequest</NavLink>
+   
+    </div>
+
+    <div id="viewInfo">
+        <h4> Your profile info </h4>
+        <div class="vInfo">
+            <label>username: </label>
+            <label>@username</label>
+        </div>
+
+        <div class="vInfo">
+            <label>Firstname: </label>
+            <label>@firstname</label>
+        </div>
+
+        <div class="vInfo">
+            <label>Lastname: </label>
+            <label>@lastname</label>
+        </div>
+        <div class="vInfo">
+            <label>Age: </label>
+            <label>@age</label>
+        </div>
+        <div class="vInfo">
+            <label>Sex: </label>
+            <label>@sex</label>
+        </div>
+        <div class="vInfo">
+            <label>Birthday: </label>
+            <label>@birthday</label>
+        </div>
+        <div class="vInfo">
+            <label>Hobbies: </label>
+            <label>@hobbies</label>
+        </div>
+        <div class="vInfo">
+            <label>Major: </label>
+            <label>@major</label>
+        </div>
+        <div class="vInfo">
+            <label>Hometown: </label>
+            <label>@hometown</label>
+        </div>
+        <div class="vInfo">
+            <label>Description: </label>
+            <label>@description</label>
+        </div>
+
+        <div class="vInfo">
+                    <button @onclick="Logout">Logout</button>
+                </div>
+
+    </div>
+
+    <div id="change">
+        <h4> Change info </h4>
+        <div class="chInfo">
+            <label>Firstname: </label> <input type="text" placeholder="firstname" @bind-value="tobeEditedfirstname"/>
+        </div>
+        <div class="chInfo">
+            <label>Lastname: </label> <input type="text" placeholder="lastname" @bind-value="tobeEditedlastname"/>
+        </div>
+        <div class="chInfo">
+            <label>Sex: </label>
+            <select @onchange="@setSex">
+                <option value="M">M</option>
+                <option value="F">F</option>
+            </select>
+        </div>
+        <div class="chInfo">
+            <label>Age: </label> <input type="text" placeholder="age" @bind-value="tobeEditedage"/>
+        </div>
+        <div class="chInfo">
+            <label>Birthday: </label> <input type="date" @bind-value="tobeEditedbirthday"/>
+        </div>
+
+        <div class="chInfo">
+            <label>Hobbies: </label> <input type="text" placeholder="hobbies" @bind-value="tobeEditedhobbies"/>
+        </div>
+        <div class="chInfo">
+            <label>Major: </label>
+            <select @onchange="@setMajor">
+                <option value="Architectural Technology and Construction Management">Architectural Technology and Construction Management</option>
+                <option value="Character Animation">Character Animation</option>
+                <option value="Civil Engineering ">Civil Engineering </option>
+                <option value="Climate and Supply Engineering ">Climate and Supply Engineering </option>
+                <option value="Computer Graphic Arts">Computer Graphic Arts</option>
+                <option value="Construction Technology">Construction Technology</option>
+                <option value="Design and Business">Design and Business</option>
+                <option value="Design, Technology and Business">Design, Technology and Business</option>
+                <option value="Global Business Engineering">Global Business Engineering</option>
+                <option value="Global Nutrition and Health ">Global Nutrition and Health </option>
+                <option value="Graphic Storytelling">Graphic Storytelling</option>
+                <option value="International Sales and Marketing Management">International Sales and Marketing Management</option>
+                <option value="Marketing Management">Marketing Management</option>
+                <option value="Materials Science Engineering">Materials Science Engineering</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Software Technology Engineering">Software Technology Engineering</option>
+                <option value="Value Chain Management">Value Chain Management</option>
+
+
+            </select>
+        </div>
+
+        <div class="chInfo">
+            <label>Hometown: </label> <input type="text" placeholder="hometown" @bind-value="tobeEditedhometown"/>
+        </div>
+        <div class="chInfo">
+            <label>Description: </label> <input type="text" placeholder="description" @bind-value="tobeEditeddescription"/>
+        </div>
+
+        <div class="chInfo">
+            <label>Password: </label> <input type="text" placeholder="password" @bind-value="tobeEditpassword"/>
+        </div>
+
+        <div class="chInfo">
+            <button @onclick="editInfo">change</button>
+        </div>
+
+    </div>
+</div>
+
+
+@code {
+    IUserService client = new UserService();
+
+    public string username { set; get; }
+
+    public string password { set; get; }
+
+    public string firstname { set; get; }
+
+    public string lastname { set; get; }
+
+    public int age { set; get; }
+
+    public string sex { set; get; }
+
+    public string birthday { set; get; }
+
+    public string hobbies { set; get; }
+
+    public string major { set; get; }
+
+    public string hometown { set; get; }
+
+    public string description { set; get; }
+
+
+    private string tobeEditedfirstname;
+    private string tobeEditedlastname;
+    private string tobeEditedsex = "M";
+    private DateTime tobeEditedbirthday;
+    private string tobeEditedhometown;
+    private string tobeEditedhobbies;
+    private string tobeEditedmajor;
+    private string tobeEditeddescription;
+    private int tobeEditedage;
+    private string tobeEditpassword;
+
+
+    public void setSex(ChangeEventArgs args)
+    {
+        string result = args.Value.ToString();
+        tobeEditedsex = result;
+    }
+
+    public void setMajor(ChangeEventArgs args)
+    {
+        string result = args.Value.ToString();
+        tobeEditedmajor = result;
+    }
+
+
+    protected override void OnInitialized()
+    {
+        try
+        {
+            User user = client.getUserInfo(client.getcurrentName());
+            Console.WriteLine("a2" + client.getcurrentName());
+            firstname = user.firstname;
+            lastname = user.lastname;
+            age = user.age;
+            sex = user.sex;
+            major = user.major;
+            description = user.description;
+            hometown = user.hometown;
+            hobbies = user.hobbies;
+            username = user.username;
+            birthday = user.birthday;
+            tobeEditedfirstname = firstname;
+            tobeEditedlastname = lastname;
+            tobeEditedsex = sex;
+            if (string.IsNullOrEmpty(birthday))
+            {
+                tobeEditedbirthday = DateTime.UtcNow;
+            }
+            else
+            {
+                tobeEditedbirthday = DateTime.Parse(user.birthday);
+            }
+            
+            tobeEditedhometown = user.hometown;
+            tobeEditedhobbies = user.hobbies;
+            tobeEditedmajor = user.major;
+            tobeEditeddescription = user.description;
+            tobeEditedage = user.age;
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+
+    public async Task Logout()
+    {
+        NavigationManager.NavigateTo("/Logout");
+    }
+
+    public async Task editInfo()
+    {
+        try
+        {
+
+            if (string.IsNullOrEmpty(tobeEditpassword))
+            {
+                client.editInfo(username, password, tobeEditedfirstname, tobeEditedlastname, tobeEditedhobbies, tobeEditedsex, tobeEditedhometown, tobeEditeddescription, tobeEditedmajor, tobeEditedage, tobeEditedbirthday);
+
+            }
+            
+            client.editInfo(username, tobeEditpassword, tobeEditedfirstname, tobeEditedlastname, tobeEditedhobbies, tobeEditedsex, tobeEditedhometown, tobeEditeddescription, tobeEditedmajor, tobeEditedage, tobeEditedbirthday);
+            Console.WriteLine("EDIT TIER 1 UI");
+            OnInitialized();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+
+
+
+
+}

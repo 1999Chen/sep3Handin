@@ -1,0 +1,35 @@
+﻿@page "/SignUp"
+@using tier1.Data
+@inject NavigationManager NavigationManager
+<div class="same">
+    <h3>BuddieFinder</h3>
+    <div id="SignInfo">
+        <div id="SignDone">
+            You have succesfully signed up. Welcome to BuddieFinder! 
+            <br> Go back and log in!
+            <button @onclick="back">go back</button>
+        </div>    
+    </div>
+    
+    <div id="pic3a">
+        <img src="pic3a.png" alt="pic3">
+    </div>
+    
+    <div id="pic4a">
+        <img src="pic4a.png" alt="pic4">
+    </div>
+        
+
+
+</div>
+
+@code {
+
+    public IUserService clicent=new UserService();
+    public async Task back()
+    {
+        clicent.logout();
+        NavigationManager.NavigateTo("/");
+    }
+
+}
